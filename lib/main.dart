@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:nofap/routes/routes.dart';
+import 'package:nofap/screens/Pages/Home/homescreen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+   Get.put(HomeController());
 
   // Set full-screen immersive mode
   SystemChrome.setEnabledSystemUIMode(

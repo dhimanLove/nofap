@@ -272,7 +272,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
         return SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -303,7 +303,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SizedBox(height: 50,),
                         Text(
                           "${hc.days}",
                           style: TextStyle(
@@ -316,7 +315,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             fontFamily: 'Chillax'
                           ),
                         ),
-                        SizedBox(height: 25),
+                        
                         Text(
                           hc.days.value == 1 ? "DAY CLEAN" : "DAYS CLEAN",
                           style: TextStyle(
@@ -330,7 +329,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         const SizedBox(height: 10),
                         Text(hc.badge, style: const TextStyle(fontSize: 28)),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: 15),
                         Container(
                           width: double.infinity,
                           padding: const EdgeInsets.all(16),

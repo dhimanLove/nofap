@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:nofap/screens/Pages/Home/homescreen.dart';
+import 'package:nofap/screens/Rewards/rewards.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -12,13 +13,12 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   int selectedIndex = 0;
 
-  final List<Widget> pages = const [
+  final List<Widget> pages =  [
     HomeScreen(),
     Page2(),
-    Page3(),
+    SimpleAudioScreen(),
   ];
 
-  // Ultra-light color scheme
   static const Color backgroundColor = Color(0xFFF9FAFB); // main bg
   static const Color barColor = Color(0xFFFFFFFF); // navbar bg
   static const Color activeColor = Color(0xFF2563EB); // active icon
@@ -113,30 +113,6 @@ class Page2 extends StatelessWidget {
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600)),
             SizedBox(height: 8),
             Text('Find what you need',
-                style: TextStyle(fontSize: 16, color: Color(0xFF6B7280))),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class Page3 extends StatelessWidget {
-  const Page3({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Icon(Icons.person, size: 64, color: Color(0xFF2563EB)),
-            SizedBox(height: 16),
-            Text('Profile',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600)),
-            SizedBox(height: 8),
-            Text('Manage your account',
                 style: TextStyle(fontSize: 16, color: Color(0xFF6B7280))),
           ],
         ),
